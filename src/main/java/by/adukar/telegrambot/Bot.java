@@ -35,35 +35,43 @@ public class Bot extends TelegramLongPollingBot {
     @SneakyThrows
     public void sendAnswerFromBot(Update update){
         Long chatId = update.getMessage().getChatId();
-        switch (update.getMessage().getText()){
-            case Commands.START:{
-                userService.addUserToList(userService.createUserFromUpdate(update));
-                sendMsg(textService.getPropValues(Paths.HELLO_STRING_PATH, Text.SAY_HELLO_PROPERTY),chatId);
-                sendPhoto(textService.getPropValues(Paths.PHOTOS_URLS_PATH, Photos.HELLO_PHOTO_PATH), chatId);
-                break;
-            }
-            case Commands.COLORS: {
-                sendMsg(Color.RED.getCode(), chatId);
-                break;
-            }
-            case Commands.BUTTONS:{
-                sendMsgWithButtons("Сделайте выбор:", replyButtons.keyboardMarkupForSelectStudentOrTeacher(),chatId);
-                break;
-            }
-            case Commands.USERS:{
-                sendMsg(userService.getAllUsers(), chatId);
-                break;
-            }
-            case Commands.LOCATION:{
-                sendLocation(chatId);
-                break;
-            }
-            default:{
-                sendMsg("Write admin to get help @yqpuss", chatId);
-                sendContact(chatId);
-                break;
-            }
+
+
+       if(update.getMessage().getText().equals("/start")){
+           sendMsg("hello hlebushek i am bot", chatId);
+           sendMsg("command: /start , /myLocation , /hello , /command , /myId , /Location , /admin , /photo , /photo1", chatId);
+           sendMsgWithButtons("text",replyButtons.keyboardMarkupForSelectStudentOrTeacher(),chatId);
+       }
+
+       if(update.getMessage().getText().equals(("/hello"))){
+           sendMsg("hello human", chatId);
+       }
+
+       if(update.getMessage().getText().equals(("/myLocation"))){
+           sendMsg("I don't know how to do that yet. Come back later", chatId);
+       }
+       if(update.getMessage().getText().equals(("/command"))){
+           sendMsg("/start , /myLocation , /hello , /command , /myId , /Location , /admin , /photo , /photo1 ", chatId);
+       }
+       if(update.getMessage().getText().equals(("/myId"))){
+           sendMsg("i don't know how to do that,sorry bro",chatId);
+       }
+       if (update.getMessage().getText().equals(("/photo"))){
+           sendPhoto("https://images.theconversation.com/files/350865/original/file-20200803-24-50u91u.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=675.0&fit=crop", chatId);
+       }
+        if (update.getMessage().getText().equals(("/photo1"))){
+            sendPhoto("https://www.minecraft.net/etc.clientlibs/minecraft/clientlibs/main/resources/img/minecraft-creeper-face.jpg", chatId);
         }
+        if (update.getMessage().getText().equals(("/Location"))){
+            sendLocation(chatId);
+        }
+        if (update.getMessage().getText().equals(("/admin"))){
+            sendContact(chatId);
+        }
+
+
+
+
     }
 
     public synchronized void sendMsg(String message, Long chatId) {
@@ -79,9 +87,9 @@ public class Bot extends TelegramLongPollingBot {
 
     public synchronized void sendContact(Long chatId) {
         SendContact sendContact = new SendContact();
-        sendContact.setPhoneNumber("+375447357152");
-        sendContact.setFirstName("Anton");
-        sendContact.setLastName("Kupreichik");
+        sendContact.setPhoneNumber("+375293436008");
+        sendContact.setFirstName("Aleksander");
+        sendContact.setLastName("Buinevich");
         sendContact.setChatId(chatId);
         try {
             execute(sendContact);
@@ -105,8 +113,8 @@ public class Bot extends TelegramLongPollingBot {
     public synchronized void sendLocation(Long chatId){
         SendLocation sendLocation = new SendLocation();
         sendLocation.setChatId(chatId);
-        sendLocation.setLatitude(Float.valueOf("-33.830693"));
-        sendLocation.setLongitude(Float.valueOf("151.219"));
+        sendLocation.setLatitude(Float.valueOf("51.5466587"));
+        sendLocation.setLongitude(Float.valueOf("-0.3415513"));
 
         try {
             execute(sendLocation);
@@ -141,11 +149,11 @@ public class Bot extends TelegramLongPollingBot {
 
     @Override
     public String getBotUsername() {
-        return "adukar4_1bot";
+        return "Map2233Bot";
     }
 
     @Override
     public String getBotToken() {
-        return "1741890763:AAEiZmqGQOPicqDbZrkDD_V26rRHI35Ik4k";
+        return "1784502453:AAEl7FgKP2L66cdJExZ8z4zFiSh0IdGBTPs";
     }
 }

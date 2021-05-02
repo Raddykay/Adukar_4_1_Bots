@@ -8,6 +8,8 @@ import org.telegram.telegrambots.api.objects.replykeyboard.buttons.KeyboardRow;
 import java.io.IOException;
 import java.util.ArrayList;
 
+
+
 public class ReplyButtons {
 
     TextService textService = new TextService();
@@ -16,20 +18,23 @@ public class ReplyButtons {
 
         ArrayList<KeyboardRow> keyboard = new ArrayList<>();
         KeyboardRow keyboardFirstRow = new KeyboardRow();
+        KeyboardRow keyboardSecondRow = new KeyboardRow();
 
         ReplyKeyboardMarkup keyboardMarkup = new ReplyKeyboardMarkup();
         keyboardMarkup.setSelective(true);
         keyboardMarkup.setResizeKeyboard(true);
         keyboardMarkup.setOneTimeKeyboard(false);
-        try {
-            keyboardFirstRow.add(textService.getPropValues(Paths.BUTTON_STRING_PATH, "reply.messageForButton.Student"));
-            keyboardFirstRow.add(textService.getPropValues(Paths.BUTTON_STRING_PATH, "reply.messageForButton.Teacher"));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+
+        keyboardFirstRow.add("telephone");
+        keyboardFirstRow.add("help");
+        keyboardSecondRow.add("location");
+        keyboardSecondRow.add("photo");
+        keyboardSecondRow.add("photo1");
         keyboard.add(keyboardFirstRow);
+        keyboard.add(keyboardSecondRow);
         keyboardMarkup.setKeyboard(keyboard);
         return keyboardMarkup;
 
     }
+
 }
