@@ -151,7 +151,7 @@ public class ReplyButtons {
         keyboardFirstRow.add("назад");
         keyboardFirstRow.add("ХрамСвятогоСемейства");
         keyboardFirstRow.add("ЗамокКоломарес");
-        keyboardFirstRow.add("Сантьяго-де-Компостело");
+        keyboardFirstRow.add("СантьягоДеКомпостело");
 
         keyboard.add(keyboardFirstRow);
         keyboardMarkup.setKeyboard(keyboard);
@@ -191,7 +191,7 @@ public class ReplyButtons {
         keyboardMarkup.setOneTimeKeyboard(false);
 
         keyboardFirstRow.add("назад");
-        keyboardFirstRow.add("координаты");
+        keyboardFirstRow.add("координатыBKP");
 
 
         keyboard.add(keyboardFirstRow);
@@ -211,7 +211,7 @@ public class ReplyButtons {
         keyboardMarkup.setOneTimeKeyboard(false);
 
         keyboardFirstRow.add("назад");
-        keyboardFirstRow.add("координаты");
+        keyboardFirstRow.add("координатыSTEGE");
 
 
         keyboard.add(keyboardFirstRow);
@@ -219,4 +219,145 @@ public class ReplyButtons {
         return keyboardMarkup;
 
     }
+    public ReplyKeyboardMarkup keyboardMarkupForSelectХрамСвятогоСемейства() {
+
+        ArrayList<KeyboardRow> keyboard = new ArrayList<>();
+        KeyboardRow keyboardFirstRow = new KeyboardRow();
+        KeyboardRow keyboardSecondRow = new KeyboardRow();
+
+        ReplyKeyboardMarkup keyboardMarkup = new ReplyKeyboardMarkup();
+        keyboardMarkup.setSelective(true);
+        keyboardMarkup.setResizeKeyboard(true);
+        keyboardMarkup.setOneTimeKeyboard(false);
+
+        keyboardFirstRow.add("назад");
+        keyboardFirstRow.add("координатыHMS");
+
+
+        keyboard.add(keyboardFirstRow);
+        keyboardMarkup.setKeyboard(keyboard);
+        return keyboardMarkup;
+
+    }
+    public ReplyKeyboardMarkup keyboardMarkupForSelectBigBan() {
+
+        ArrayList<KeyboardRow> keyboard = new ArrayList<>();
+        KeyboardRow keyboardFirstRow = new KeyboardRow();
+        KeyboardRow keyboardSecondRow = new KeyboardRow();
+
+        ReplyKeyboardMarkup keyboardMarkup = new ReplyKeyboardMarkup();
+        keyboardMarkup.setSelective(true);
+        keyboardMarkup.setResizeKeyboard(true);
+        keyboardMarkup.setOneTimeKeyboard(false);
+
+        keyboardFirstRow.add("назад");
+        keyboardFirstRow.add("координатыBGBN");
+
+
+        keyboard.add(keyboardFirstRow);
+        keyboardMarkup.setKeyboard(keyboard);
+        return keyboardMarkup;
+
+    }
+    public ReplyKeyboardMarkup keyboardMarkupForSelectЗамокКоломарес() {
+
+        ArrayList<KeyboardRow> keyboard = new ArrayList<>();
+        KeyboardRow keyboardFirstRow = new KeyboardRow();
+        KeyboardRow keyboardSecondRow = new KeyboardRow();
+
+        ReplyKeyboardMarkup keyboardMarkup = new ReplyKeyboardMarkup();
+        keyboardMarkup.setSelective(true);
+        keyboardMarkup.setResizeKeyboard(true);
+        keyboardMarkup.setOneTimeKeyboard(false);
+
+        keyboardFirstRow.add("назад");
+        keyboardFirstRow.add("координатыZMK");
+
+
+        keyboard.add(keyboardFirstRow);
+        keyboardMarkup.setKeyboard(keyboard);
+        return keyboardMarkup;
+
+    }
+    public ReplyKeyboardMarkup keyboardMarkupForSelectСантьягоДеКомпостело() {
+
+        ArrayList<KeyboardRow> keyboard = new ArrayList<>();
+        KeyboardRow keyboardFirstRow = new KeyboardRow();
+        KeyboardRow keyboardSecondRow = new KeyboardRow();
+
+        ReplyKeyboardMarkup keyboardMarkup = new ReplyKeyboardMarkup();
+        keyboardMarkup.setSelective(true);
+        keyboardMarkup.setResizeKeyboard(true);
+        keyboardMarkup.setOneTimeKeyboard(false);
+
+        keyboardFirstRow.add("назад");
+        keyboardFirstRow.add("координатыSDEKOM");
+
+
+        keyboard.add(keyboardFirstRow);
+        keyboardMarkup.setKeyboard(keyboard);
+        return keyboardMarkup;
+
+    }
+    public ReplyKeyboardMarkup keyboardMarkupForSelectЭйфелеваБашня() {
+
+        ArrayList<KeyboardRow> keyboard = new ArrayList<>();
+        KeyboardRow keyboardFirstRow = new KeyboardRow();
+        KeyboardRow keyboardSecondRow = new KeyboardRow();
+
+        ReplyKeyboardMarkup keyboardMarkup = new ReplyKeyboardMarkup();
+        keyboardMarkup.setSelective(true);
+        keyboardMarkup.setResizeKeyboard(true);
+        keyboardMarkup.setOneTimeKeyboard(false);
+
+        keyboardFirstRow.add("назад");
+        keyboardFirstRow.add("координатыELB");
+
+
+        keyboard.add(keyboardFirstRow);
+        keyboardMarkup.setKeyboard(keyboard);
+        return keyboardMarkup;
+
+    }
+    public ReplyKeyboardMarkup keyboardMarkupForSelectСантьягоДворецФонтенбло() {
+
+        ArrayList<KeyboardRow> keyboard = new ArrayList<>();
+        KeyboardRow keyboardFirstRow = new KeyboardRow();
+        KeyboardRow keyboardSecondRow = new KeyboardRow();
+
+        ReplyKeyboardMarkup keyboardMarkup = new ReplyKeyboardMarkup();
+        keyboardMarkup.setSelective(true);
+        keyboardMarkup.setResizeKeyboard(true);
+        keyboardMarkup.setOneTimeKeyboard(false);
+
+        keyboardFirstRow.add("назад");
+        keyboardFirstRow.add("координатыFNTBLO");
+
+
+        keyboard.add(keyboardFirstRow);
+        keyboardMarkup.setKeyboard(keyboard);
+        return keyboardMarkup;
+
+    }
+    public ReplyKeyboardMarkup keyboardMarkupForSelectПарижскийДиснейлэнд() {
+
+        ArrayList<KeyboardRow> keyboard = new ArrayList<>();
+        KeyboardRow keyboardFirstRow = new KeyboardRow();
+        KeyboardRow keyboardSecondRow = new KeyboardRow();
+
+        ReplyKeyboardMarkup keyboardMarkup = new ReplyKeyboardMarkup();
+        keyboardMarkup.setSelective(true);
+        keyboardMarkup.setResizeKeyboard(true);
+        keyboardMarkup.setOneTimeKeyboard(false);
+
+        keyboardFirstRow.add("назад");
+        keyboardFirstRow.add("координатыPRDL");
+
+
+        keyboard.add(keyboardFirstRow);
+        keyboardMarkup.setKeyboard(keyboard);
+        return keyboardMarkup;
+
+    }
+
 }
