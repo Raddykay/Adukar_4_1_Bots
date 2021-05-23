@@ -25,8 +25,8 @@ public class ReplyButtons {
         keyboardMarkup.setResizeKeyboard(true);
         keyboardMarkup.setOneTimeKeyboard(false);
 
-        keyboardFirstRow.add("Country");
-        keyboardFirstRow.add("...");
+        keyboardFirstRow.add("Страны");
+        keyboardFirstRow.add("опрос");
 
 
         keyboard.add(keyboardFirstRow);
@@ -68,8 +68,9 @@ public class ReplyButtons {
         keyboardMarkup.setOneTimeKeyboard(false);
 
         keyboardFirstRow.add("назад");
-        keyboardFirstRow.add("attractionsA");
-        keyboardFirstRow.add("coordinatesA");
+        keyboardFirstRow.add("достопримечательностиА");
+        keyboardFirstRow.add("координатыA");
+        keyboardFirstRow.add("оценка");
 
         keyboard.add(keyboardFirstRow);
         keyboardMarkup.setKeyboard(keyboard);
@@ -88,8 +89,9 @@ public class ReplyButtons {
         keyboardMarkup.setOneTimeKeyboard(false);
 
         keyboardFirstRow.add("назад");
-        keyboardFirstRow.add("attractionsS");
-        keyboardFirstRow.add("coordinatesS");
+        keyboardFirstRow.add("достопримечательностиS");
+        keyboardFirstRow.add("координатыS");
+        keyboardFirstRow.add("оценка");
 
         keyboard.add(keyboardFirstRow);
         keyboardMarkup.setKeyboard(keyboard);
@@ -108,8 +110,9 @@ public class ReplyButtons {
         keyboardMarkup.setOneTimeKeyboard(false);
 
         keyboardFirstRow.add("назад");
-        keyboardFirstRow.add("attractionsF");
-        keyboardFirstRow.add("coordinatesF");
+        keyboardFirstRow.add("достопримечательностиF");
+        keyboardFirstRow.add("координатыF");
+        keyboardFirstRow.add("оценка");
 
         keyboard.add(keyboardFirstRow);
         keyboardMarkup.setKeyboard(keyboard);
@@ -128,9 +131,9 @@ public class ReplyButtons {
         keyboardMarkup.setOneTimeKeyboard(false);
 
         keyboardFirstRow.add("назад");
-        keyboardFirstRow.add("BuckinghamPalace");
-        keyboardFirstRow.add("Stonehenge");
-        keyboardFirstRow.add("BigBan");
+        keyboardFirstRow.add("БукингемскийДворец");
+        keyboardFirstRow.add("Стоунхендж");
+        keyboardFirstRow.add("Биг-Бен");
 
         keyboard.add(keyboardFirstRow);
         keyboardMarkup.setKeyboard(keyboard);
@@ -192,6 +195,7 @@ public class ReplyButtons {
 
         keyboardFirstRow.add("назад");
         keyboardFirstRow.add("координатыBKP");
+        keyboardFirstRow.add("оценка");
 
 
         keyboard.add(keyboardFirstRow);
@@ -212,6 +216,7 @@ public class ReplyButtons {
 
         keyboardFirstRow.add("назад");
         keyboardFirstRow.add("координатыSTEGE");
+        keyboardFirstRow.add("оценка");
 
 
         keyboard.add(keyboardFirstRow);
@@ -232,6 +237,7 @@ public class ReplyButtons {
 
         keyboardFirstRow.add("назад");
         keyboardFirstRow.add("координатыHMS");
+        keyboardFirstRow.add("оценка");
 
 
         keyboard.add(keyboardFirstRow);
@@ -252,6 +258,7 @@ public class ReplyButtons {
 
         keyboardFirstRow.add("назад");
         keyboardFirstRow.add("координатыBGBN");
+        keyboardFirstRow.add("оценка");
 
 
         keyboard.add(keyboardFirstRow);
@@ -272,6 +279,7 @@ public class ReplyButtons {
 
         keyboardFirstRow.add("назад");
         keyboardFirstRow.add("координатыZMK");
+        keyboardFirstRow.add("оценка");
 
 
         keyboard.add(keyboardFirstRow);
@@ -292,6 +300,7 @@ public class ReplyButtons {
 
         keyboardFirstRow.add("назад");
         keyboardFirstRow.add("координатыSDEKOM");
+        keyboardFirstRow.add("оценка");
 
 
         keyboard.add(keyboardFirstRow);
@@ -312,6 +321,7 @@ public class ReplyButtons {
 
         keyboardFirstRow.add("назад");
         keyboardFirstRow.add("координатыELB");
+        keyboardFirstRow.add("оценка");
 
 
         keyboard.add(keyboardFirstRow);
@@ -332,6 +342,7 @@ public class ReplyButtons {
 
         keyboardFirstRow.add("назад");
         keyboardFirstRow.add("координатыFNTBLO");
+        keyboardFirstRow.add("оценка");
 
 
         keyboard.add(keyboardFirstRow);
@@ -352,6 +363,52 @@ public class ReplyButtons {
 
         keyboardFirstRow.add("назад");
         keyboardFirstRow.add("координатыPRDL");
+        keyboardFirstRow.add("оценка");
+
+
+        keyboard.add(keyboardFirstRow);
+        keyboardMarkup.setKeyboard(keyboard);
+        return keyboardMarkup;
+
+    }
+    public ReplyKeyboardMarkup keyboardMarkupForSelectназад() {
+
+        ArrayList<KeyboardRow> keyboard = new ArrayList<>();
+        KeyboardRow keyboardFirstRow = new KeyboardRow();
+        KeyboardRow keyboardSecondRow = new KeyboardRow();
+
+        ReplyKeyboardMarkup keyboardMarkup = new ReplyKeyboardMarkup();
+        keyboardMarkup.setSelective(true);
+        keyboardMarkup.setResizeKeyboard(true);
+        keyboardMarkup.setOneTimeKeyboard(false);
+
+        keyboardFirstRow.add("опрос");
+        keyboardFirstRow.add("Страны");
+
+
+        keyboard.add(keyboardFirstRow);
+        keyboardMarkup.setKeyboard(keyboard);
+        return keyboardMarkup;
+
+    }
+    public ReplyKeyboardMarkup keyboardMarkupForSelectоценка() {
+
+        ArrayList<KeyboardRow> keyboard = new ArrayList<>();
+        KeyboardRow keyboardFirstRow = new KeyboardRow();
+        KeyboardRow keyboardSecondRow = new KeyboardRow();
+
+        ReplyKeyboardMarkup keyboardMarkup = new ReplyKeyboardMarkup();
+        keyboardMarkup.setSelective(true);
+        keyboardMarkup.setResizeKeyboard(true);
+        keyboardMarkup.setOneTimeKeyboard(false);
+
+        keyboardFirstRow.add("⭐");
+        keyboardFirstRow.add("⭐2");
+        keyboardFirstRow.add("⭐3");
+        keyboardFirstRow.add("⭐4");
+        keyboardFirstRow.add("⭐5");
+        keyboardFirstRow.add("назад");
+
 
 
         keyboard.add(keyboardFirstRow);

@@ -52,19 +52,39 @@ public class Bot extends TelegramLongPollingBot {
 
 
        if(update.getMessage().getText().equals("/start")){
-           sendMsg("hello hlebushek i am bot", chatId);
+           sendMsg("Привет хлебушек, я бот ;)", chatId);
            sendMsgWithButtons("что вас интересует?",replyButtons.keyboardMarkupForSelectStudentOrTeacher(),chatId);
-           sendMsgWithButtons("frfr", inlineButtons.keyboardMarkup(), chatId);
+           sendMsgWithButtons("если вы знаете команды можно их написать через клавиатуру например : Англия", replyButtons.keyboardMarkupForSelectStudentOrTeacher(), chatId);
        }
-       if (update.getMessage().getText().equals("назад")){
-           ReplyKeyboardMarkup keyboardMarkupForSelectCountry;
+       if(update.getMessage().getText().equals("назад")){
+         sendMsgWithButtons("что вас интересует?", replyButtons.keyboardMarkupForSelectназад(), chatId);
        }
+       if (update.getMessage().getText().equals("оценка")){
+           sendMsgWithButtons("во сколько оценим?", replyButtons.keyboardMarkupForSelectоценка(), chatId);
+       }
+       if (update.getMessage().getText().equals("⭐")){
+           sendMsgWithButtons("ладно...", replyButtons.keyboardMarkupForSelectоценка(), chatId);
+       }
+        if (update.getMessage().getText().equals("⭐2")){
+            sendMsgWithButtons("ок!", replyButtons.keyboardMarkupForSelectоценка(), chatId);
+        }
+        if (update.getMessage().getText().equals("⭐3")){
+            sendMsgWithButtons("хорошая оценка!", replyButtons.keyboardMarkupForSelectоценка(), chatId);
+        }
+        if (update.getMessage().getText().equals("⭐4")){
+            sendMsgWithButtons("я тоже так считаю", replyButtons.keyboardMarkupForSelectоценка(), chatId);
+        }
+        if (update.getMessage().getText().equals("⭐5")){
+            sendMsgWithButtons("даже так.", replyButtons.keyboardMarkupForSelectоценка(), chatId);
+        }
 
-       if (update.getMessage().getText().equals(("/opross"))){
+
+
+        if (update.getMessage().getText().equals(("опрос"))){
            sendPoll(chatId);
            sendDice(chatId);
        }
-       if (update.getMessage().getText().equals(("Country"))){
+       if (update.getMessage().getText().equals(("Страны"))){
            sendMsgWithButtons("какие страны вас интересуют?", replyButtons.keyboardMarkupForSelectCountry(), chatId);
        }
        if (update.getMessage().getText().equals(("Англия"))){
@@ -74,13 +94,13 @@ public class Bot extends TelegramLongPollingBot {
                    "римскими банями в городе Бат и старинными университетами в Оксфорде и Кембридже", replyButtons.keyboardMarkupForSelectАнглия(), chatId);
            sendPhoto("https://www.tripzaza.com/ru/destinations/wp-content/uploads/2018/08/Dostoprimechatelnosti-Londona-e1533796630149.jpg", chatId );
        }
-       if (update.getMessage().getText().equals(("coordinatesA"))){
+       if (update.getMessage().getText().equals(("координатыA"))){
            sendLocationA(chatId);
        }
-       if (update.getMessage().getText().equals(("attractionsA"))){
+       if (update.getMessage().getText().equals(("достопримечательностиА"))){
            sendMsgWithButtons("что вас интересует?" , replyButtons.keyboardMarkupForSelectattractionsA(), chatId);
        }
-       if (update.getMessage().getText().equals(("BuckinghamPalace"))){
+       if (update.getMessage().getText().equals(("БукингемскийДворец"))){
            sendMsgWithButtons("Букинге́мский дворе́ц (англ. Buckingham Palace [ˈbʌkɪŋəm ˈpælɪs]) — официальная " +
                    "лондонская резиденция королевы Великобритании Елизаветы II[1]. Расположен напротив улицы Мэлл и " +
                    "Грин-парка с беломраморным и позолоченным " +
@@ -90,7 +110,7 @@ public class Bot extends TelegramLongPollingBot {
        if (update.getMessage().getText().equals(("координатыBKP"))){
            sendLocationBuckinghamPalace(chatId);
        }
-       if(update.getMessage().getText().equals(("BigBan"))){
+       if(update.getMessage().getText().equals(("Биг-Бен"))){
            sendMsgWithButtons("Биг-Бен (англ. Big Ben) — популярное туристическое название часовой башни Вестминстерского дворца. Официальное название башни с 2012 года — Башня Елизаветы, или Елизаветинская башня (англ. Elizabeth Tower)[1][2].\n" +
                    "\n" +
                    "Изначально «Биг-Бен» являлось названием самого большого из шести колоколов, однако часто это название расширительно относят и к часам, и к самой часовой башне в целом[3]. На момент отливки Биг-Бен был самым большим и тяжёлым колоколом Соединённого Королевства. Его вес при этом составлял 13,7 тонны. В 1881 году уступил первенство колоколу Большой Пол (17 тонн).\n" +
@@ -101,7 +121,7 @@ public class Bot extends TelegramLongPollingBot {
        if (update.getMessage().getText().equals("координатыBGBN")){
            sendLocationBigBan(chatId);
        }
-        if(update.getMessage().getText().equals(("Stonehenge"))){
+        if(update.getMessage().getText().equals(("Стоунхендж"))){
             sendMsgWithButtons("Стоунхендж, Стонхендж[7] (англ. Stonehenge [ˈstəʊnˌhendʒ]) — внесённое в список Всемирного наследия каменное мегалитическое сооружение (кромлех) в графстве Уилтшир (Англия). Находится примерно в 130 км к юго-западу от Лондона, примерно в 3,2 км к западу от Эймсбери и в 13 км к северу от Солсбери.\n" +
                     "\n" +
                     "Один из самых знаменитых археологических памятников в мире, Стоунхендж состоит из кольцевых и подковообразных" +
@@ -122,10 +142,10 @@ public class Bot extends TelegramLongPollingBot {
                    "творения архитектора Антонио Гауди, среди которых храм Святого Семейства." , replyButtons.keyboardMarkupForSelectИспания(), chatId);
            sendPhoto("https://34travel.me/media/upload/images/2016/march/madrid_guide/new/jorge-fernandez-salas-v8XeGZf8tcs-unsplash.jpg", chatId);
        }
-       if (update.getMessage().getText().equals(("coordinatesS"))){
+       if (update.getMessage().getText().equals(("координатыS"))){
            sendLocationS(chatId);
        }
-        if (update.getMessage().getText().equals(("attractionsS"))){
+        if (update.getMessage().getText().equals(("достопримечательностиS"))){
             sendMsgWithButtons("что вас интересует?" , replyButtons.keyboardMarkupForSelectattractionsS(), chatId);
         }
         if (update.getMessage().getText().equals(("ХрамСвятогоСемейства"))){
@@ -164,7 +184,7 @@ public class Bot extends TelegramLongPollingBot {
            sendPhoto("https://media.tacdn.com/media/attractions-splice-spp-674x446/07/03/1c/9c.jpg", chatId);
 
        }
-       if (update.getMessage().getText().equals(("coordinatesF"))){
+       if (update.getMessage().getText().equals(("координатыF"))){
            sendLocationF(chatId);
        }
        if (update.getMessage().getText().equals(("ЭйфелеваБашня"))){
@@ -198,38 +218,75 @@ public class Bot extends TelegramLongPollingBot {
        if (update.getMessage().getText().equals("координатыPRDL")){
            sendLocationДворецПарижскийДиснейлэнд(chatId);
        }
-        if (update.getMessage().getText().equals(("attractionsF"))){
+        if (update.getMessage().getText().equals(("достопримечательностиF"))){
             sendMsgWithButtons("что вас интересует?" , replyButtons.keyboardMarkupForSelectattractionsF(), chatId);
         }
 
-       if(update.getMessage().getText().equals(("/hello"))){
-           sendMsg("hello human", chatId);
+       if(update.getMessage().getText().equals(("привет"))){
+           sendMsg("привет кожанный", chatId);
        }
-
-       if(update.getMessage().getText().equals(("/myLocation"))){
-           sendMsg("I don't know how to do that yet. Come back later", chatId);
-       }
-       if(update.getMessage().getText().equals(("/command"))){
-           sendMsg("/start , /myLocation , /hello , /command , /myId , /Location , /admin , /photo , /photo1 ", chatId);
-       }
-       if(update.getMessage().getText().equals(("/myId"))){
-           sendMsg("i don't know how to do that,sorry bro",chatId);
-       }
-       if (update.getMessage().getText().equals(("/photo"))){
-           sendPhoto("https://images.theconversation.com/files/350865/original/file-20200803-24-50u91u.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=675.0&fit=crop", chatId);
-       }
-        if (update.getMessage().getText().equals(("/photo1"))){
-            sendPhoto("https://www.minecraft.net/etc.clientlibs/minecraft/clientlibs/main/resources/img/minecraft-creeper-face.jpg", chatId);
+        if(update.getMessage().getText().equals(("пока"))){
+            sendMsg("ладно..возрощайся потом :)", chatId);
         }
-        if (update.getMessage().getText().equals(("/Location"))){
+        if(update.getMessage().getText().equals(("сам ты кожанный"))){
+            sendMsg("ок.", chatId);
+        }
+        if(update.getMessage().getText().equals(("как дела?"))){
+            sendMsg("как обычно.", chatId);
+        }
+        if(update.getMessage().getText().equals(("кто ты?"))){
+            sendMsg("Обама.", chatId);
+        }
+        if(update.getMessage().getText().equals(("да"))){
+            sendMsg("нет", chatId);
+        }
+        if(update.getMessage().getText().equals(("нет"))){
+            sendMsg("да", chatId);
+        }
+        if(update.getMessage().getText().equals(("пошли в GYM"))){
+            sendMsg("я бы хотел , но я не умею ходить :(", chatId);
+        }
+        if(update.getMessage().getText().equals(("спишь?"))){
+            sendMsg("нет блин, лежу.", chatId);
+        }
+        if(update.getMessage().getText().equals(("лежишь?"))){
+            sendMsg("нет блин, сплю.", chatId);
+        }
+        if(update.getMessage().getText().equals(("..."))){
+            sendMsg("что молчишь?", chatId);
+        }
+        if(update.getMessage().getText().equals(("дурачок?"))){
+            sendMsg("может быть.", chatId);
+        }
+        if(update.getMessage().getText().equals(("почему?"))){
+            sendMsg("потому.", chatId);
+        }
+        if(update.getMessage().getText().equals(("ладно"))){
+            sendMsg("ладно.", chatId);
+        }
+        if(update.getMessage().getText().equals(("пакет"))){
+            sendMsg("из петёрочки?", chatId);
+        }
+        if(update.getMessage().getText().equals(("кто я?"))){
+            sendMsg("Алла Пугачёва , а так же кожанный.", chatId);
+        }
+        if(update.getMessage().getText().equals(("всмысле?"))){
+            sendMsg("карамысле.", chatId);
+        }
+        if(update.getMessage().getText().equals(("пошёл ты"))){
+            sendMsg("чел, я бы с радостью , но у меня нет ног :(", chatId);
+        }
+
+
+       if(update.getMessage().getText().equals(("command"))){
+           sendMsg("/start , myLocation , hello , command , myId , Location , /admin", chatId);
+       }
+        if (update.getMessage().getText().equals(("Location"))){
             sendLocationA(chatId);
         }
         if (update.getMessage().getText().equals(("/admin"))){
             sendContact(chatId);
         }
-
-
-
 
     }
 
